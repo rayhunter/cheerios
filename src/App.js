@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
+import CourseDetail from './components/courseDetail/courseDetail';
 import './App.css';
+import 'react-bulma-components/dist/react-bulma-components.min.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section class="section">
+        <div class="container">
+          <nav class="columns">
+            <div class="column">
+              <div class="field">
+                <p class="control">
+                  <label for="course-search">
+                    Course
+                  </label>
+                </p>
+                <p class="control">
+                  <input id="course-search" name="course-search" class="input" type="text" placeholder="Enter course" />
+                </p>
+              </div>
+            </div>  
+            <div class="column">
+              <div class="field">
+                <p class="control">
+                  <button class="button course-button">
+                    Submit
+                  </button>
+                </p>
+              </div>
+            </div>  
+          </nav>
+          <div class="columns">
+            <div class="column">
+              <CourseDetail dept='CS' course='111' year='2018' semester='Fall' />  
+            </div>
+            <div class="column">
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
